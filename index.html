@@ -1,8 +1,10 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Griyanshi ❤️</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Griyanshi ❤️</title>
 
 <style>
 *{
@@ -10,139 +12,215 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Arial,sans-serif;
-}
-
-body{
-background:linear-gradient(135deg,#ff758c,#ff7eb3);
-color:white;
-text-align:center;
-overflow-x:hidden;
+scroll-behavior:smooth;
 }
 
 section{
-min-height:100vh;
+height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 padding:20px;
+text-align:center;
+position:relative;
+overflow:hidden;
 }
 
 img{
 width:280px;
 max-width:90%;
 border-radius:20px;
-box-shadow:0 0 20px rgba(255,255,255,0.4);
 margin:20px 0;
+box-shadow:0 10px 30px rgba(0,0,0,.3);
 }
 
-h1{
-font-size:3rem;
-margin-bottom:20px;
-}
-
-h2{
-font-size:2rem;
+h1,h2{
 margin-bottom:15px;
 }
 
 p{
 max-width:700px;
 line-height:1.8;
-font-size:1.1rem;
 }
 
-.card{
-background:rgba(255,255,255,0.15);
-backdrop-filter:blur(10px);
-padding:25px;
-border-radius:20px;
-margin:20px;
-}
-
-.btn{
+.next{
+margin-top:20px;
 padding:12px 25px;
-background:white;
-color:#ff4f81;
 border:none;
 border-radius:30px;
+font-size:16px;
 font-weight:bold;
-margin-top:20px;
+cursor:pointer;
+background:white;
+}
+
+/* PAGE 1 */
+#p1{
+background:linear-gradient(135deg,#ff758c,#ff7eb3);
+color:white;
+}
+#p1 h1{
+animation:heartbeat 1s infinite;
+}
+@keyframes heartbeat{
+50%{transform:scale(1.1);}
+}
+
+/* PAGE 2 */
+#p2{
+background:#111;
+color:white;
+}
+#p2 img{
+animation:zoom 4s infinite alternate;
+}
+@keyframes zoom{
+from{transform:scale(1);}
+to{transform:scale(1.08);}
+}
+
+/* PAGE 3 */
+#p3{
+background:linear-gradient(135deg,#667eea,#764ba2);
+color:white;
+}
+#p3 .card{
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(12px);
+padding:20px;
+border-radius:20px;
+}
+
+/* PAGE 4 */
+#p4{
+background:#fce4ec;
+color:#333;
+}
+.flower{
+position:absolute;
+font-size:25px;
+animation:fall 8s linear infinite;
+}
+@keyframes fall{
+from{transform:translateY(-100px);}
+to{transform:translateY(120vh);}
+}
+
+/* PAGE 5 */
+#p5{
+background:#222;
+color:white;
+}
+.polaroid{
+background:white;
+padding:10px;
+border-radius:5px;
+transform:rotate(-3deg);
+}
+
+/* PAGE 6 */
+#p6{
+background:linear-gradient(135deg,#00c9ff,#92fe9d);
+color:#111;
+}
+.type{
+overflow:hidden;
+white-space:nowrap;
+border-right:3px solid;
+width:0;
+animation:typing 4s steps(40,end) forwards;
+}
+@keyframes typing{
+to{width:100%;}
+}
+
+/* PAGE 7 */
+#p7{
+background:black;
+color:white;
+}
+#p7 h1{
+font-size:3rem;
+animation:glow 2s infinite alternate;
+}
+@keyframes glow{
+from{text-shadow:0 0 10px pink;}
+to{text-shadow:0 0 30px hotpink;}
 }
 </style>
 </head>
-
 <body>
 
-<section>
+<section id="p1">
 <h1>❤️ Griyanshi ❤️</h1>
+<p>A little journey made specially for you.</p>
+<button class="next" onclick="location.href='#p2'">Next ➜</button>
+</section>
+
+<section id="p2">
+<h2>🌸 Beautiful Smile</h2>
 <img src="IMG-20260612-WA0000.jpg">
-<div class="card">
-<p>
-Every beautiful story begins with a simple moment.
-Some people become memories,
-and some memories become unforgettable.
-</p>
-</div>
+<p>Every beautiful story starts with a simple moment.</p>
+<button class="next" onclick="location.href='#p3'">Next ➜</button>
 </section>
 
-<section>
-<h2>🌸 A Small Story</h2>
+<section id="p3">
+<div class="card">
+<h2>✨ Special Person</h2>
 <img src="IMG-20260612-WA0001.jpg">
-<div class="card">
-<p>
-You make ordinary moments special.
-Your smile carries happiness,
-and your presence makes everything brighter.
-</p>
+<p>Some people become unforgettable without even trying.</p>
 </div>
+<button class="next" onclick="location.href='#p4'">Next ➜</button>
 </section>
 
-<section>
-<h2>✨ Beautiful Soul</h2>
-<img src="IMG-20260612-WA0002.jpg">
-<div class="card">
-<p>
-Among thousands of faces,
-some stand out forever.
-Not because of looks alone,
-but because of the happiness they bring.
-</p>
-</div>
-</section>
+<section id="p4">
+<div class="flower" style="left:10%">🌸</div>
+<div class="flower" style="left:40%">🌷</div>
+<div class="flower" style="left:70%">🌹</div>
 
-<section>
 <h2>💖 Memories</h2>
+<img src="IMG-20260612-WA0002.jpg">
+<p>Every smile creates a memory worth keeping.</p>
+
+<button class="next" onclick="location.href='#p5'">Next ➜</button>
+</section>
+
+<section id="p5">
+<div class="polaroid">
 <img src="IMG-20260612-WA0003.jpg">
-<div class="card">
-<p>
-Every conversation,
-every laugh,
-every moment becomes a memory worth keeping.
-</p>
 </div>
+
+<h2>🌹 Precious Moments</h2>
+<p>Some moments may be small, but they stay forever.</p>
+
+<button class="next" onclick="location.href='#p6'">Next ➜</button>
 </section>
 
-<section>
-<h2>🌹 Thank You</h2>
+<section id="p6">
 <img src="IMG-20260612-WA0004.jpg">
-<div class="card">
-<p>
-Thank you for the smiles,
-the memories,
-and all the little moments that became special.
+
+<h2>💌 Message</h2>
+
+<p class="type">
+Thank you for every smile, every memory and every special moment.
 </p>
-</div>
+
+<button class="next" onclick="location.href='#p7'">Next ➜</button>
 </section>
 
-<section>
-<h1>✨ The End ✨</h1>
-<p>
-Some people stay in our hearts forever.
+<section id="p7">
+<h1>✨ You Are Special ✨</h1>
+
+<p style="margin-top:20px;">
+No matter how many pages are written,
+some people always remain the favorite chapter.
 ❤️
 </p>
 
-<button class="btn">Made With Love ❤️</button>
+<button class="next" onclick="location.href='#p1'">
+🔄 Start Again
+</button>
 </section>
 
 </body>
